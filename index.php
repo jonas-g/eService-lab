@@ -8,12 +8,15 @@
 	</head>
 	<body>
 		<h1>Kommentarsfält</h1>
-		<form name="kommentarForm" onsubmit="validateComment()">
+		<form name="kommentarForm" action="assets/db.php" method="POST" onsubmit="validateComment()">
 			<input type="text" name="userName" placeholder="Namn">
 			<input type="text" name="userMail" placeholder="E-postadress">
 			<input type="text" name="kommentarText" placeholder="Kommentar">
 			<input type="submit" value="Skicka!" class="button">
 		</form>
 		
+		<?php
+			require 'assets/kommentarer.php';
+		?>
 	</body>
 </html>

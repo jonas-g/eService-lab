@@ -2,17 +2,21 @@
 $user = 'root';
 $password = 'root';
 $db = 'lab_db';
-$host = 'localhost';
-$port = '8889';
+$host = 'localhost:8889';
 
-$link = mysqli_init();
-$success = mysqli_real_connect(
-	$link,
-	$host,
-	$user,
-	$password,
-	$db,
-	$port);
+$conn = mysqli_connect($host, $user, $password, $db);
 
-var_dump($success);
+$namn = $_POST["userName"];
+$epost = $_POST["userMail"];
+$text = $_POST["kommentarText"];
+
+$sql = "INSERT INTO kommentar(namn, epost, text) VALUES ('$namn', '$epost', '$text')";
+$result = mysqli_query($conn, $sql);
+
+if ($result) {
+	echo "Kommentar infogad";
+} else  {
+	echo "Kommentaren sparades inte i databasen";
+}
+
 ?>
