@@ -8,11 +8,11 @@
 	</head>
 	<body>
 		<h1>Kommentarsfält</h1>
-		<form name="kommentarForm">
-			<p><label>Namn:</label> <input type="text" name="userName"></p>
-			<label>E-postadress:</label> <input type="text" name="userMail">
-			<label>Kommentar:</label> <input type="text" name="kommentarText">
-			<input type="submit" value="Skicka!" class="button">
+		<form name="kommentarForm" method="POST" action="doValidation.php" onsubmit="return validateComment()">
+			<p><input type="text" placeholder="Namn" name="userName"></p>
+			<p><input type="text" name="userMail" placeholder="E-postadress"></p>
+			<p><input type="text" name="kommentarText" placeholder="Kommentar"></p>
+			<p><input type="submit" value="Skicka!" class="button"></p>
 		</form>
 	</body>
 </html>
