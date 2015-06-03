@@ -9,10 +9,11 @@
 	<body>
 		<h1>Kommentarsfält</h1>
 		<form name="kommentarForm" onsubmit="validateComment()">
-			<p><input type="text" name="userName" placeholder="Namn"></p>
-			<p><input type="text" name="userMail" placeholder="E-postadress"></p>
-			<p><input type="text" name="kommentarText" placeholder="Kommentar"></p>
-			<p><input type="submit" value="Skicka!" class="button"></p>
+			<input type="text" name="userName" placeholder="Namn">
+			<input type="text" name="userMail" placeholder="E-postadress">
+			<input type="text" name="kommentarText" placeholder="Kommentar">
+			<input type="submit" value="Skicka!" class="button">
 		</form>
+		
 	</body>
 </html>
