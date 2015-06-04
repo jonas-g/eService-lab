@@ -5,6 +5,7 @@ function validateComment () {
 	var text = document.kommentarForm.kommentarText.value;
 	if (name == "" || name == null || email == "" || email == null || text == "" || text == null) {
 		alert("Var vänlig fyll i alla fält.");
+		//document.getElementById("userName").focus();
 		return false;
 	};
 	var at_index = email.indexOf("@");
@@ -14,6 +15,7 @@ function validateComment () {
 		return true;
 	} else {
 		alert("Skriv in en korrekt e-postadress.");
+		//document.getElementById("userMail").focus();
 		return false;
 	};
 }
