@@ -1,23 +1,14 @@
 //javascript
 function validateComment () {
-	var name = document.kommentarForm.userName.value;
-	var email = document.kommentarForm.userMail.value;
-	var text = document.kommentarForm.kommentarText.value;
-	if (name == "" || name == null || email == "" || email == null || text == "" || text == null) {
+	var text = document.quoteForm.quoteText.value;
+	var source = document.quoteForm.quoteSource.value;
+	var year = document.quoteForm.quoteYear.value;
+	if (text == "" || text == null || source == "" || source == null || year == "" || year == null) {
 		alert("Var vänlig fyll i alla fält.");
 		//document.getElementById("userName").focus();
 		return false;
 	};
-	var at_index = email.indexOf("@");
-	var domain_dot_index = email.indexOf(".",at_index);
-
-	if (at_index > -1 && domain_dot_index > -1) {
-		return true;
-	} else {
-		alert("Skriv in en korrekt e-postadress.");
-		//document.getElementById("userMail").focus();
-		return false;
-	};
+	
 }
 
 function validateRegistration () {
@@ -39,10 +30,12 @@ function validateRegistration () {
 		//document.getElementById("email").focus();
 		return false;
 	};
+/*
 
 	if (!password.test(.{6})) {
 		alert("Lösenordet måste bestå av minst sex tecken.");
 		//document.getElementById("password").focus();
 		return false;
 	};
+*/
 }

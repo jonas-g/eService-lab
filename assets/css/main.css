@@ -99,8 +99,8 @@ h1#main_title{
 	height: 200px;
 }
 
-#comment_form{
-	padding: 20px;
+#quote_form{
+	padding: 27px 0px 33px 0px;
 	
 }
 
@@ -108,7 +108,16 @@ input, textarea{
 	font-size: medium;
 	padding: 10px;
 	border: 0px;
-	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+#quote_form textarea{
+	width: 95%;
+	height: 150px;
+	font-size: 2em;
+}
+
+#quote_form input{
+	width: 29%;
 }
 
 .entry{

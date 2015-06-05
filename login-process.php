@@ -5,17 +5,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$email = mysqli_real_escape_string($conn, test_input($_POST["email"]));
 	$password = mysqli_real_escape_string($conn, test_input($_POST["password"]));
 
-	$sql = "SELECT username, password, salt FROM user WHERE email = '$email'";
+	$sql = "SELECT username, password, salt, user_id FROM user WHERE email = '$email'";
 	$query = mysqli_query($conn, $sql);
 	$result = mysqli_fetch_assoc($query);
 	
 	$hash = $result['password'];
 	$salt = $result['salt'];
 	$username = $result['username'];
+	$userid = $result['user_id'];
 
 	if ($hash == (sha1($salt . $password))) {
 		$_SESSION['current_user'] = $email;
 		$_SESSION['current_username'] = $username;
+		$_SESSION['current_userid'] = $userid;
 		echo "Inloggad";
 	} else  {
 		echo "Inloggningen misslyckades";

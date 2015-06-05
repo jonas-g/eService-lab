@@ -1,7 +1,9 @@
 <?php
+/*
 	if(!isset($_SESSION)) {
 		session_start();
 	};
+*/
 ?>
 
 <!DOCTYPE html>
@@ -29,8 +31,10 @@
 					};
 					if (isset($_SESSION['current_user'])) {
 						echo '<div id="menu">';
-							echo '<p>Inloggad som '.$_SESSION['current_username'].'</p>';
-							echo '<p><a href="logout.php">Logga ut</a></p>';
+							echo '<ul>';
+								echo '<li>Inloggad som '.$_SESSION['current_username'].'</li>';
+								echo '<li><a href="logout.php">Logga ut</a></li>';
+							echo '</ul>';
 						echo '</div>';
 					};
 				?>
