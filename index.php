@@ -1,18 +1,14 @@
+<?php 
+	require 'include/bootstrap.php';
+	require 'include/views/_header.php';
+?>
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>Kommentarsfält</title>
-		<link rel="stylesheet" href="assets/css/main.css">
-		<script src="assets/js/main.js"></script>
-	</head>
-	<body>
-		<h1>Kommentarsfält</h1>
-		<form name="kommentarForm" onsubmit="return validateComment()" action="assets/db.php" method="POST">
-			<input type="text" name="userName" placeholder="Namn">
-			<input type="text" name="userMail" placeholder="E-postadress">
-			<input type="text" name="kommentarText" placeholder="Kommentar">
-			<input type="submit" value="Skicka!" class="button">
+
+		<form name="kommentarForm" onsubmit="return validateComment()" action="posts-create.php" method="POST">
+			<input type="text" name="userName" placeholder="Namn"></br>
+			<input type="text" name="userMail" placeholder="E-postadress"></br>
+			<input type="text" name="kommentarText" placeholder="Kommentar"></br>
+			<input type="submit" value="Skicka!" class="button"></br>
 			<?php
 				// $errors = array();
 				// if ($_SERVER["REQUEST METHOD"] == "POST") {
@@ -32,8 +28,7 @@
 			?>
 		</form>
 		
-		<?php
-			require 'assets/kommentarer.php';
-		?>
-	</body>
-</html>
+<?php
+	require 'posts.php';
+	require 'include/views/_footer.php';
+?>

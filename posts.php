@@ -1,11 +1,4 @@
 <?php
-$user = 'root';
-$password = 'root';
-$db = 'lab_db';
-$host = 'localhost:8889';
-
-$conn = mysqli_connect($host, $user, $password, $db);
-
 $sql = "SELECT namn, epost, text FROM kommentar ORDER BY kommentar_id DESC";
 $result = mysqli_query($conn, $sql);
 
