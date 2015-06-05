@@ -16,13 +16,15 @@
 		<div id="wrapper">
 			<div id="header">
 				<div id="title_bar">
-					<h1 id="main_title"><a href="index.php">Loggbok</a></h1>
+					<h1 id="main_title"><a href="index.php">Book of Quotes</a></h1>
 				</div>
 				<?php
 					if (!isset($_SESSION['current_user'])) {
 						echo '<div id="menu">';
-							echo '<p><a href="login.php">Logga in</a></p>';
-							echo '<p><a href="register.php">Registrera</a></p>';
+							echo '<ul>';
+								echo '<li><a href="login.php">Logga in</a></li>';
+								echo '<li><a href="register.php">Registrera</a></li>';
+							echo '</ul>';
 						echo '</div>';
 					};
 					if (isset($_SESSION['current_user'])) {
@@ -33,4 +35,5 @@
 					};
 				?>
 			</div>
+			<div id="content">
 			

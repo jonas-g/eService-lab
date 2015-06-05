@@ -1,5 +1,12 @@
+html, body{
+	width: 100%;
+	height: 100%;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+
 body, h1, h2, h3{
-	font-family: 'myriad pro', Helvetica, Arial, sans-serif;
+	font-family: Myriad Pro, Helvetica, Arial, sans-serif;
 	letter-spacing: 0em;
 	}
 	
@@ -8,28 +15,40 @@ h1, h2, h3{
 	}
 
 p{
-	font-size: 1em;
+	font-size: 1.2em;
 	line-height: 1.6em;
 	color: #555;
 	}
 	
+a, a:link, a:visited{
+	color: gray;
+	text-decoration: none;
+}
+
+a:hover{
+	color: silver;
+}
+
 input{
 	width: 150px;
 }
 
 #title_bar{
 	width: 100%;
-	padding: 40px 24px 24px 24px;
+	height: 140px;
+	padding: 5px 0px;
 	background-color: #000000;
 }
 
 h1#main_title{
 	color: #ffffff;
+	font-family: Bodoni, Garamond, Times, serif;
+	font-size: 3.5em;
 	
 }
 
 #wrapper{
-	width: 50%;
+	width: 100%;
 	margin: 0px auto 0px auto;
 	padding: 0px 0px 0px 0px;
 	box-shadow: 0px 0px 20px #ffffff;	
@@ -37,16 +56,77 @@ h1#main_title{
 
 #header{
 	width: 100%;
-	height: 100px;
+	height: 200px;
 	margin: 0px auto 0px auto;
-	padding: 10px 0px 0px 0px;
+	padding: 0px 0px 10px 0px;
 	text-align: center;
 }
 
 #menu{
-	
+	height: 25px;
+	text-align: center;
+	background-color: black;
+	padding: 0px 0px 25px 0px
+}
+
+#menu ul {
+	height: 25px;
+	text-align: center;
+	margin: 0px auto 0px auto;
+	padding: 0px 0px 0px 0px;
+}
+
+#menu ul li {
+	line-height: 25px;
+	height: 25px;
+	padding: 0px 15px 0px 15px;
+	color: #606060 !important;
+	text-align: center !important;
+	display: inline-block;
+}
+
+#menu li~li { 
+	border-left: 1px solid #606060;
+}
+
+#content{
+	width: 50%;
+	margin: 0px auto;
 }
 
 #footer{
 	width: 100%;
+	height: 200px;
+}
+
+#comment_form{
+	padding: 20px;
+	
+}
+
+input, textarea{
+	font-size: medium;
+	padding: 10px;
+	border: 0px;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+.entry{
+	padding: 1px 30px 1px 30px;
+	margin: 20px;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+.entry p{
+	font-family: serif;
+	font-style: italic;
+	font-size: 2em;
+	line-height: normal;
+}
+
+.entry h3{
+	font-family: serif;
+	font-style: normal;
+	font-size: small;
+	text-align: right;
 }

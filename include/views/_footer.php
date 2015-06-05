@@ -1,3 +1,4 @@
+			</div> <!-- content end from _header.php -->
 			<div id="footer">
 				
 			</div>
