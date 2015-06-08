@@ -2,6 +2,8 @@
 	session_start();
 	
 	require 'models/db.php';
+	
+	//$db = new Database();
 
 	function test_input($input)
 	{

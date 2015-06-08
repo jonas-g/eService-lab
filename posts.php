@@ -1,6 +1,13 @@
 <?php
+/*
 $sql = "SELECT quote.quote_text, quote.source, quote.year, user.username, user.email, quote.time FROM quote INNER JOIN user ON user.user_id=quote.user_id ORDER BY quote_id DESC";
 $result = mysqli_query($conn, $sql);
+*/
+
+$result = db_query("SELECT quote.quote_text, quote.source, quote.year, user.username, user.email, quote.time FROM quote INNER JOIN user ON user.user_id=quote.user_id ORDER BY quote_id DESC");
+var_dump($result);
+
+// $result = $db->query("SELECT quote.quote_text, quote.source, quote.year, user.username, user.email, quote.time FROM quote INNER JOIN user ON user.user_id=quote.user_id ORDER BY quote_id DESC");
 
 while ($row = mysqli_fetch_assoc($result)) {
 	$year = $year_adbc = "";
