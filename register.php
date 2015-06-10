@@ -12,11 +12,13 @@
 		<?php
 
 		?>
-		<form name="registreringsForm" onsubmit="return validateRegistration()" action="register-process.php" method="POST"><br/>
-			<input type="text" placeholder="Användarnamn" name="username" id="username"><br/>
-			<input type="text" placeholder="E-postadress" name="email" id="email"><br/>
-			<input type="text" placeholder="Lösenord" name="password" id="password"><br/><br/>
-			<input type="submit" value="Submit" class="button">
-		</form>
+		<div id="register_box">
+			<form name="registreringsForm" onsubmit="return validateRegistration()" action="register-process.php" method="POST"><br/>
+				<input type="text" placeholder="Användarnamn" name="username" id="username"><br/>
+				<input type="text" placeholder="E-postadress" name="email" id="email"><br/>
+				<input type="password" placeholder="Lösenord" name="password" id="password"><br/><br/>
+				<input type="submit" value="Submit" class="button">
+			</form>
+		</div>
 	</body>
 </html>

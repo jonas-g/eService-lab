@@ -64,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		}
 		mysqli_close($conn);
 */
-		$result = mysqli_query($conn, $sql);
+		$result = db_query($sql);
 
 		if ($result) {
 			echo "Quote added";

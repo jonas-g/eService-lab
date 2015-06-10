@@ -133,9 +133,40 @@ input, textarea{
 	line-height: normal;
 }
 
+.entry h2{
+	font-family: serif;
+	font-weight: bold;
+	color: #313131;
+	font-size: medium;
+	text-align: right;
+}
+
 .entry h3{
 	font-family: serif;
 	font-style: normal;
 	font-size: small;
 	text-align: right;
+}
+
+#register_box{
+	width: 400px;
+	height: 400px;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+	position: relative;
+}
+
+#login_box{
+	left: 30%;
+	top: 100px;
+	width: 400px;
+	height: 400px;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+	position: absolute;
+	background: white;
+	display: none;
+}
+
+.modal{
+	background: rgba(0, 0, 0, 0.35);
+	-webkit-transition: all 1s;
 }

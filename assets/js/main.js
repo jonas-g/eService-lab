@@ -39,3 +39,29 @@ function validateRegistration () {
 	};
 */
 }
+
+$(document).ready(function(){
+	$('#login').click(function() {
+		$('body').children().not('#login_box').addClass('modal');
+		$('#login_box').toggle();
+		$('#login_username').focus();
+	})
+	$('#login_submit').click(function() {
+		doLogin();
+	})
+	
+	
+	function doLogin() {
+		if($('#login_email').val() != '' && $('#login_password').val() != '') {
+			$post('login-process.php', {'email': $('#login_email').val(), 'password': $('#login_password').val()}).done(function(data) {
+				if(data) {
+					alert(data);
+				} else {
+					location.reload();
+				}
+			})
+		} else {
+			alert('You have not filled out all the fields.');
+		}
+	}
+});

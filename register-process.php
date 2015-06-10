@@ -40,15 +40,22 @@
 		if ($username_error == "" && $email_error == "" && $password_error == "") {
 			$salt = unique_salt();
 			$hash = sha1($salt . $password);
-	
-			$sql = "INSERT INTO user(username, email, password, salt) VALUES ('$username', '$email', '$hash', '$salt')";
-			$result = mysqli_query($conn, $sql);
-	
-			if ($result) {
-				echo "Registrering lyckades";
-			} else  {
-				echo "Registrering misslyckades";
+			
+			if (db_fetch("SELECT user_id FROM user WHERE email = '$email'") == null) {
+				$sql = "INSERT INTO user(username, email, password, salt) VALUES ('$username', '$email', '$hash', '$salt')";
+				$query = db_query($sql);
+		
+				if ($query) {
+					echo "Registrering lyckades";
+					
+				} else  {
+					echo "Registrering misslyckades";
+				}
+			} else {
+				echo "E-postkonto redan registrerat";
 			}
+	
+			
 		}
 	}
 

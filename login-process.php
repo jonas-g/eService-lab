@@ -6,8 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$password = mysqli_real_escape_string($conn, test_input($_POST["password"]));
 
 	$sql = "SELECT username, password, salt, user_id FROM user WHERE email = '$email'";
-	$query = mysqli_query($conn, $sql);
-	$result = mysqli_fetch_assoc($query);
+	$result = db_fetch($sql);
 	
 	$hash = $result['password'];
 	$salt = $result['salt'];

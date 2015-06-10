@@ -14,7 +14,7 @@
 		?>
 		<form name="loginForm" onsubmit="return validateRegistration()" action="login-process.php" method="POST"><br/>
 			<input type="text" placeholder="E-postadress" name="email" id="email"><br/>
-			<input type="text" placeholder="Lösenord" name="password" id="password"><br/><br/>
+			<input type="password" placeholder="Lösenord" name="password" id="password"><br/><br/>
 			<input type="submit" value="Submit" class="button">
 		</form>
 	</body>

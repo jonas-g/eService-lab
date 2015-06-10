@@ -12,6 +12,7 @@
 		<meta charset="utf-8">
 		<title>Loggbok</title>
 		<link rel="stylesheet" href="assets/css/main.css" type="text/css">
+		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 		<script src="assets/js/main.js" charset="utf-8" type="text/javascript"></script>
 	</head>
 	<body>
@@ -24,8 +25,8 @@
 					if (!isset($_SESSION['current_user'])) {
 						echo '<div id="menu">';
 							echo '<ul>';
-								echo '<li><a href="login.php">Logga in</a></li>';
-								echo '<li><a href="register.php">Registrera</a></li>';
+								echo '<li id="login"><a href="#">Logga in</a></li>';
+								echo '<li id="register"><a href="register.php">Registrera</a></li>';
 							echo '</ul>';
 						echo '</div>';
 					};
@@ -33,10 +34,12 @@
 						echo '<div id="menu">';
 							echo '<ul>';
 								echo '<li>Inloggad som '.$_SESSION['current_username'].'</li>';
-								echo '<li><a href="logout.php">Logga ut</a></li>';
+								echo '<li id="logout"><a href="logout.php">Logga ut</a></li>';
 							echo '</ul>';
 						echo '</div>';
 					};
+					
+					require 'include/views/_login_box.php';
 				?>
 			</div>
 			<div id="content">

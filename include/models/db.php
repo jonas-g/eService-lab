@@ -17,22 +17,28 @@ function db_connect(){
 	return $conn;
 }
 
-function db_query($query){
+function db_query($sql){
 	$conn = db_connect();
 	//return $conn->query($query);
-	return mysqli_query($conn, $query); 
+	return mysqli_query($conn, $sql); 
 	//	or die("Query error: " . mysqli_error($conn));
-}		
+}
+
+function db_fetch($sql){
+	$query = db_query($sql);
+	return mysqli_fetch_assoc($query);
+}
 
 /**
 * Database functions
 */
 /*
+
 class Database {
 	
-	public $conn;
+	var $conn;
 
-	function __construct(){	
+	function __construct(){
 		$user = 'root';
 		$password = 'root';
 		$db = 'lab_db';
@@ -40,8 +46,8 @@ class Database {
 		
 		$this->$conn = mysqli_connect($host, $user, $password, $db) ;
 		if ($this->$conn->connect_error){
-			$err_code = $mysqli->connect_errno;
-			die("Error: ($err_code) $this->connection->connect_error");
+			$err_code = $this->conn->connect_errno;
+			die("Error: ($err_code)" . $this->conn->connect_error);
 		}
 		//	or die("Error " . mysqli_error($conn));
 		//return $conn;
@@ -49,10 +55,11 @@ class Database {
 	}
 
 	public function query($sql){
-		return $this->db->mysqli_query($conn, $sql)
-			or die("Query error: " . $this->db->error;
+		return mysqli_query($this->conn, $sql)
+			or die("Query error: " . mysqli_error($this->conn));
 	}
 }
 */
+
 
 ?>
